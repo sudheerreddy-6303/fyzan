@@ -1,5 +1,6 @@
 import React from "react";
 import { Award } from "lucide-react";
+import { productImages } from "../imageUrls.js";
 
 export default function Promo() {
   return (
@@ -11,9 +12,7 @@ export default function Promo() {
         <button>EXPLORE NOW</button>
       </div>
       <div className="vases">
-        <div className="vase" style={{ width: 40, height: 60 }} />
-        <div className="vase" style={{ width: 55, height: 90 }} />
-        <div className="vase" style={{ width: 45, height: 70 }} />
+        <img src={productImages.hornSculptures} alt="Horn sculptures" className="fc-promo-img fc-promo-img-lg" />
       </div>
     </div>
   );

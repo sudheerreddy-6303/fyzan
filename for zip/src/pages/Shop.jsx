@@ -37,7 +37,7 @@ export default function Shop() {
           {filtered.map((p) => (
             <div className="fc-prod-card" key={p.name}>
               <div className="fc-prod-thumb">
-                <p.icon className="fc-icon fc-icon-light" />
+                <img src={p.image} alt={p.name} className="fc-icon fc-icon-light" />
                 {p.isNew && <span className="fc-new-badge">NEW</span>}
                 <div className="wish"><Heart size={13} /></div>
               </div>

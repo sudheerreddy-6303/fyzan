@@ -12,7 +12,9 @@ export default function Categories() {
       <div className="fc-grid">
         {categories.map((c) => (
           <div className="fc-cat-card" key={c.name}>
-            <div className="fc-cat-thumb"><c.icon className="fc-icon" /></div>
+            <div className="fc-cat-thumb">
+              <img src={c.image} alt={c.name} className="fc-icon" />
+            </div>
             <div className="name">{c.name.toUpperCase()}</div>
             <div className="shop">SHOP NOW <ChevronRight size={12} /></div>
           </div>

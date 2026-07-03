@@ -1,23 +1,23 @@
 import React from "react";
-import { Award, ShieldCheck, Truck, Leaf } from "lucide-react";
+import { Award } from "lucide-react";
 import PageBanner from "../components/PageBanner.jsx";
-import { WorkshopIcon, CraftHandsIcon, HornIcon } from "../components/Icons.jsx";
+import { pageImages, productImages } from "../imageUrls.js";
 
 const values = [
-  { icon: CraftHandsIcon, title: "Handmade With Care", text: "Every piece is shaped, sanded, and polished by hand in our own workshop." },
-  { icon: Leaf, title: "Natural Materials", text: "We work with natural horn, wood, resin, and rattan — sourced responsibly." },
-  { icon: ShieldCheck, title: "Quality Checked", text: "Each product is inspected before it leaves our workshop for shipping." },
-  { icon: Truck, title: "Shipped Worldwide", text: "From our workshop to your doorstep, wherever you are." },
+  { title: "Handmade With Care", text: "Every piece is shaped, sanded, and polished by hand in our own workshop." },
+  { title: "Natural Materials", text: "We work with natural horn, wood, resin, and rattan — sourced responsibly." },
+  { title: "Quality Checked", text: "Each product is inspected before it leaves our workshop for shipping." },
+  { title: "Shipped Worldwide", text: "From our workshop to your doorstep, wherever you are." },
 ];
 
 export default function AboutUs() {
   return (
     <>
-      <PageBanner title="About Us" />
+      <PageBanner title="About Us" image={pageImages.about} />
 
       <div className="fc-section fc-about-intro">
         <div className="fc-about-visual">
-          <WorkshopIcon className="fc-icon fc-icon-xl" />
+          <img src={pageImages.about} alt="About Faiza Craft" />
         </div>
         <div className="fc-about-text">
           <div className="eyebrow">OUR STORY</div>
@@ -45,7 +45,6 @@ export default function AboutUs() {
         <div className="fc-values-grid">
           {values.map((v) => (
             <div className="fc-value-card" key={v.title}>
-              <div className="ic"><v.icon size={26} /></div>
               <h4>{v.title}</h4>
               <p>{v.text}</p>
             </div>
@@ -60,7 +59,7 @@ export default function AboutUs() {
           <h3>Genuine Craftsmanship, Every Order</h3>
         </div>
         <div className="vases">
-          <HornIcon className="fc-icon fc-icon-light" style={{ width: 60, height: 60 }} />
+          <img src={productImages.vikingDrinkingHorn} alt="Viking Drinking Horn" className="fc-promo-img" />
         </div>
       </div>
     </>

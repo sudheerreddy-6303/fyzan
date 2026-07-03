@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import PageBanner from "../components/PageBanner.jsx";
 import { allProducts, categories } from "../data.js";
+import { pageImages } from "../imageUrls.js";
 
 export default function Shop() {
   const [activeCat, setActiveCat] = useState("All");
@@ -13,7 +14,7 @@ export default function Shop() {
 
   return (
     <>
-      <PageBanner title="Shop" />
+      <PageBanner title="Shop" image={pageImages.shop} />
       <div className="fc-section" style={{ paddingTop: 30 }}>
         <div className="fc-shop-filters">
           <button
@@ -37,7 +38,7 @@ export default function Shop() {
           {filtered.map((p) => (
             <div className="fc-prod-card" key={p.name}>
               <div className="fc-prod-thumb">
-                <p.icon className="fc-icon fc-icon-light" />
+                <img src={p.image} alt={p.name} className="fc-prod-img" />
                 {p.isNew && <span className="fc-new-badge">NEW</span>}
                 <div className="wish"><Heart size={13} /></div>
               </div>

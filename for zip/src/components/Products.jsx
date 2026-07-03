@@ -13,7 +13,7 @@ export default function Products() {
         {products.map((p) => (
           <div className="fc-prod-card" key={p.name}>
             <div className="fc-prod-thumb">
-              <p.icon className="fc-icon fc-icon-light" />
+              <img src={p.image} alt={p.name} className="fc-icon fc-icon-light" />
               <div className="wish"><Heart size={13} /></div>
             </div>
             <div className="fc-prod-info">

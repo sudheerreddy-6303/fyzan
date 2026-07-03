@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import PageBanner from "../components/PageBanner.jsx";
+import { pageImages } from "../imageUrls.js";
 
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +13,7 @@ export default function ContactUs() {
 
   return (
     <>
-      <PageBanner title="Contact Us" />
+      <PageBanner title="Contact Us" image={pageImages.contact} />
 
       <div className="fc-section fc-contact-grid">
         <div className="fc-contact-info">
