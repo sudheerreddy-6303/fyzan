@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+  <rect width="900" height="520" rx="24" fill="#F3ECE1"/>
+  <rect x="48" y="52" width="804" height="416" rx="20" fill="#ECE2D2"/>
+  <circle cx="252" cy="260" r="118" fill="#C99A3F" opacity="0.22"/>
+  <path d="M188 320C216 230 285 188 346 192C309 216 276 256 265 302C257 335 220 345 188 320Z" fill="#A97F2E"/>
+  <path d="M350 316C329 255 279 214 225 198C286 184 357 215 394 280C414 315 386 341 350 316Z" fill="#C99A3F"/>
+  <rect x="470" y="156" width="320" height="206" rx="14" fill="#0D1B3E"/>
+  <text x="500" y="220" fill="#F3ECE1" font-family="Arial, sans-serif" font-size="40" font-weight="700">ABOUT US</text>
+  <text x="500" y="274" fill="#D7C9AB" font-family="Arial, sans-serif" font-size="22">Handcrafted Heritage</text>
+  <text x="500" y="308" fill="#D7C9AB" font-family="Arial, sans-serif" font-size="22">Since 1998</text>
+</svg>

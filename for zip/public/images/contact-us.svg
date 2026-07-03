@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+  <rect width="900" height="520" rx="24" fill="#F3ECE1"/>
+  <rect x="80" y="92" width="740" height="336" rx="20" fill="#0D1B3E"/>
+  <rect x="130" y="148" width="320" height="220" rx="14" fill="#13224F"/>
+  <text x="160" y="218" fill="#F3ECE1" font-family="Arial, sans-serif" font-size="38" font-weight="700">CONTACT</text>
+  <text x="160" y="256" fill="#D5C8AE" font-family="Arial, sans-serif" font-size="24">support@faizacraft.com</text>
+  <text x="160" y="292" fill="#D5C8AE" font-family="Arial, sans-serif" font-size="24">+91 1234567890</text>
+  <rect x="500" y="150" width="250" height="175" rx="16" fill="#C99A3F"/>
+  <path d="M520 175H730V300H520V175Z" fill="#F3ECE1"/>
+  <path d="M520 175L625 245L730 175" stroke="#A97F2E" stroke-width="10"/>
+  <circle cx="733" cy="350" r="36" fill="#C99A3F"/>
+</svg>

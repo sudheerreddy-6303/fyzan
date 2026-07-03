@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+  <rect width="900" height="520" rx="24" fill="#F3ECE1"/>
+  <rect x="78" y="86" width="744" height="348" rx="22" fill="#ECE2D2"/>
+  <text x="122" y="154" fill="#0D1B3E" font-family="Arial, sans-serif" font-size="44" font-weight="700">TRACK ORDER</text>
+  <rect x="120" y="192" width="660" height="92" rx="14" fill="#0D1B3E"/>
+  <rect x="146" y="226" width="352" height="24" rx="12" fill="#F3ECE1"/>
+  <circle cx="560" cy="238" r="16" fill="#C99A3F"/>
+  <circle cx="616" cy="238" r="16" fill="#C99A3F"/>
+  <circle cx="672" cy="238" r="16" fill="#C99A3F"/>
+  <rect x="160" y="326" width="120" height="26" rx="13" fill="#C99A3F"/>
+  <rect x="302" y="326" width="120" height="26" rx="13" fill="#A97F2E"/>
+  <rect x="444" y="326" width="120" height="26" rx="13" fill="#13224F"/>
+  <rect x="586" y="326" width="120" height="26" rx="13" fill="#0D1B3E"/>
+</svg>
