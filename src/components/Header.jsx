@@ -18,10 +18,10 @@ export default function Header() {
       </div>
 
       <div className="fc-headright">
-        <div className="item"><User size={20} /> My Account</div>
+        <div className="item"><User size={20} /> <span className="label-text">My Account</span></div>
         <div className="item">
           <ShoppingCart size={20} />
-          <span>My Cart<br /><b>₹0.00</b></span>
+          <span className="label-text">My Cart<br /><b>₹0.00</b></span>
         </div>
       </div>
     </div>

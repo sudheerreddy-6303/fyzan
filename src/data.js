@@ -1,24 +1,28 @@
 import { ShieldCheck, Truck, RotateCcw, Award } from "lucide-react";
+import {
+  HornIcon, HornPairIcon, MugIcon, ScaleIcon, BasketIcon,
+  VaseIcon, BowlIcon, FigurineIcon, BoneIcon, SparkleIcon,
+} from "./components/Icons.jsx";
 
 export const categories = [
-  { name: "Viking Horn", tag: "VH" },
-  { name: "Scales", tag: "SC" },
-  { name: "Ram's Horn", tag: "RH" },
-  { name: "Horn & Bone Items", tag: "HB" },
-  { name: "Rattan Products", tag: "RP" },
-  { name: "Resin Products", tag: "RS" },
-  { name: "Wooden Products", tag: "WP" },
-  { name: "Ceramic Products", tag: "CP" },
-  { name: "Horn Product", tag: "HP" },
-  { name: "New Arrivals", tag: "NA" },
+  { name: "Viking Horn", icon: HornIcon },
+  { name: "Scales", icon: ScaleIcon },
+  { name: "Ram's Horn", icon: HornIcon },
+  { name: "Horn & Bone Items", icon: BoneIcon },
+  { name: "Rattan Products", icon: BasketIcon },
+  { name: "Resin Products", icon: FigurineIcon },
+  { name: "Wooden Products", icon: BowlIcon },
+  { name: "Ceramic Products", icon: VaseIcon },
+  { name: "Horn Product", icon: MugIcon },
+  { name: "New Arrivals", icon: SparkleIcon },
 ];
 
 export const products = [
-  { name: "Shofar Ram Horn", price: "$34.00" },
-  { name: "Kosher Polish Shofar Ram's Horn", price: "$7.00" },
-  { name: "Ram's Horn", price: "$8.00" },
-  { name: "Ram's Horn Pair", price: "$50.00" },
-  { name: "Horn Mug", price: "$18.00" },
+  { name: "Shofar Ram Horn", price: "$34.00", icon: HornIcon },
+  { name: "Kosher Polish Shofar Ram's Horn", price: "$7.00", icon: HornIcon },
+  { name: "Ram's Horn", price: "$8.00", icon: HornIcon },
+  { name: "Ram's Horn Pair", price: "$50.00", icon: HornPairIcon },
+  { name: "Horn Mug", price: "$18.00", icon: MugIcon },
 ];
 
 export const features = [

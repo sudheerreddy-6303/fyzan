@@ -67,7 +67,7 @@ html, body, #root { margin: 0; padding: 0; width: 100%; }
 }
 
 .fc-headright { display: flex; align-items: center; gap: 28px; font-family: Arial, sans-serif; font-size: 13px; }
-.fc-headright .item { display: flex; align-items: center; gap: 8px; color: var(--text-dark); }
+.fc-headright .item { display: flex; align-items: center; gap: 8px; color: var(--text-dark); white-space: nowrap; }
 
 /* Nav */
 .fc-nav {
@@ -75,14 +75,25 @@ html, body, #root { margin: 0; padding: 0; width: 100%; }
   display: flex; align-items: center; gap: 4px;
   padding: 0 40px;
   font-family: Arial, sans-serif;
-  flex-wrap: wrap;
+  position: relative;
 }
 .fc-nav .cat-btn {
   background: var(--gold); color: #fff; border: none; padding: 16px 22px;
   display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; cursor: pointer; letter-spacing: 0.5px;
+  white-space: nowrap;
 }
-.fc-nav a { color: #e4e8f4; text-decoration: none; padding: 16px 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+.fc-nav-links { display: flex; flex-wrap: wrap; }
+.fc-nav a { color: #e4e8f4; text-decoration: none; padding: 16px 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; display: inline-block; }
 .fc-nav a:hover { color: var(--gold); }
+.fc-nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: transparent; border: none; color: #fff; cursor: pointer;
+  padding: 10px;
+}
+.fc-nav-mobile {
+  display: none;
+}
 
 /* Hero */
 .fc-hero {
@@ -140,6 +151,8 @@ html, body, #root { margin: 0; padding: 0; width: 100%; }
   font-family: Arial, sans-serif; font-weight: 800; font-size: 26px; color: var(--gold-dark);
   border: 1px solid #e5d9c0;
 }
+.fc-icon { width: 56px; height: 56px; color: var(--gold-dark); }
+.fc-icon-light { width: 64px; height: 64px; color: rgba(255,255,255,0.9); }
 .fc-cat-card .name { font-weight: 700; font-size: 13px; color: var(--navy); font-family: Arial, sans-serif; }
 .fc-cat-card .shop { font-size: 11px; color: var(--gold-dark); font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; gap: 2px; margin-top: 4px; }
 
@@ -205,8 +218,97 @@ html, body, #root { margin: 0; padding: 0; width: 100%; }
 .fc-pay { display: flex; gap: 8px; }
 .fc-pay span { background: #fff; color: var(--navy); font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 3px; }
 
-@media (max-width: 900px) {
-  .fc-grid, .fc-prod-grid { grid-template-columns: repeat(2, 1fr); }
-  .fc-footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .fc-header { justify-content: center; text-align: center; }
+/* ============ RESPONSIVE ============ */
+
+/* Tablet: ≤1024px */
+@media (max-width: 1024px) {
+  .fc-grid, .fc-prod-grid { grid-template-columns: repeat(3, 1fr); }
+  .fc-footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .fc-hero-text h1 { font-size: 36px; }
 }
+
+/* Small tablet / large phone: ≤768px */
+@media (max-width: 768px) {
+  .fc-topbar { padding: 8px 20px; justify-content: center; text-align: center; font-size: 11px; }
+  .fc-topbar .left { display: none; }
+  .fc-topbar .right { gap: 12px; }
+
+  .fc-header { padding: 14px 20px; justify-content: center; }
+  .fc-search { order: 3; max-width: 100%; flex-basis: 100%; }
+  .fc-headright { gap: 18px; }
+  .fc-headright .label-text { display: none; }
+
+  .fc-nav { padding: 0 16px; flex-wrap: nowrap; }
+  .fc-nav .cat-btn { padding: 14px 14px; font-size: 12px; }
+  .fc-nav .cat-btn span { display: none; }
+  .fc-nav-links { display: none; }
+  .fc-nav-toggle { display: flex; align-items: center; }
+  .fc-nav-mobile {
+    display: flex; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--navy-2); z-index: 20;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .fc-nav-mobile a { padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+  .fc-hero { padding: 40px 20px; text-align: center; justify-content: center; }
+  .fc-hero-text { max-width: 100%; }
+  .fc-hero-text h1 { font-size: 30px; }
+  .fc-hero-visual { order: -1; }
+  .fc-horn-shape { width: 150px; height: 150px; }
+  .fc-vase-shape { width: 65px; height: 95px; }
+
+  .fc-features { padding: 24px 20px; justify-content: flex-start; gap: 22px; }
+  .fc-feature { flex: 1 1 45%; }
+
+  .fc-section { padding: 36px 20px; }
+  .fc-section-title h2 { font-size: 21px; }
+
+  .fc-grid, .fc-prod-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .fc-cat-thumb { height: 120px; }
+  .fc-icon { width: 44px; height: 44px; }
+  .fc-icon-light { width: 50px; height: 50px; }
+
+  .fc-promo { padding: 30px 24px; flex-direction: column; text-align: center; }
+  .fc-promo .center { order: -1; }
+  .fc-promo .center h3 { font-size: 21px; }
+
+  .fc-news { flex-direction: column; align-items: stretch; text-align: center; padding: 28px 20px; }
+  .fc-news-form { justify-content: center; }
+  .fc-news-form input { width: 100%; max-width: 320px; }
+  .fc-news-stats { justify-content: center; flex-wrap: wrap; gap: 18px; }
+
+  .fc-footer { padding: 40px 20px 16px; }
+  .fc-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 26px; }
+  .fc-bottombar { flex-direction: column; text-align: center; }
+}
+
+/* Phone: ≤480px */
+@media (max-width: 480px) {
+  .fc-logo-text .top { font-size: 19px; }
+  .fc-logo-mark { width: 36px; height: 36px; font-size: 17px; }
+
+  .fc-hero-text h1 { font-size: 25px; }
+  .fc-hero-text p { font-size: 14px; }
+  .fc-hero-text button { width: 100%; }
+  .fc-hero-visual { gap: 14px; }
+  .fc-horn-shape { width: 120px; height: 120px; }
+  .fc-vase-shape { width: 50px; height: 76px; }
+
+  .fc-feature { flex: 1 1 100%; }
+
+  .fc-grid, .fc-prod-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .fc-cat-thumb { height: 100px; }
+  .fc-cat-card .name { font-size: 11px; }
+  .fc-prod-thumb { height: 130px; }
+  .fc-prod-info .pname { font-size: 12px; min-height: auto; }
+
+  .fc-promo .badge { display: none; }
+  .fc-promo .vases { justify-content: center; }
+
+  .fc-footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .fc-footer .addr-line { justify-content: center; }
+  .fc-social { justify-content: center; }
+  .fc-pay { justify-content: center; flex-wrap: wrap; }
+}
+
